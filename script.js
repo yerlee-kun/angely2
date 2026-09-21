@@ -14,7 +14,7 @@ const universeCanvas = document.querySelector("#universe-canvas");
 const universeContext = universeCanvas.getContext("2d");
 const sunflowerImage = new Image();
 sunflowerImage.decoding = "async";
-sunflowerImage.src = "assets/girasol-joven.png";
+sunflowerImage.src = "girasol-joven.png";
 const staticUniverseCanvas = document.createElement("canvas");
 const staticUniverseContext = staticUniverseCanvas.getContext("2d");
 const sunCanvas = document.createElement("canvas");
@@ -981,8 +981,8 @@ async function buildPersonalizedZip(personalizedConfig) {
     fetchFile("index.html"),
     fetchFile("style.css"),
     fetchFile("script.js"),
-    fetchFile("assets/girasol-joven.png"),
-    fetchFile("assets/there-is-romance.mp3"),
+    fetchFile("girasol-joven.png"),
+    fetchFile("there-is-romance.mp3"),
   ]);
 
   const finalHtml = removeGeneratorFromHtml(decoder.decode(htmlBytes));
@@ -993,8 +993,8 @@ async function buildPersonalizedZip(personalizedConfig) {
     { name: "index.html", data: finalHtml },
     { name: "style.css", data: finalCss },
     { name: "script.js", data: finalScript },
-    { name: "assets/girasol-joven.png", data: flowerImage },
-    { name: "assets/there-is-romance.mp3", data: music },
+    { name: "girasol-joven.png", data: flowerImage },
+    { name: "there-is-romance.mp3", data: music },
   ]);
 }
 
